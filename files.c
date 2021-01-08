@@ -29,16 +29,16 @@
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Files [0.1.1] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            File Read Write by I.A.
+                                 Files by I.A.
 
-        FRW is just an utility program that allows you to manipulate files
+        Files is just an utility program that allows you to manipulate files
     more simply than stdio.h does.
 
     You can now read or write into a file in only one line.
 
     This program only adds 2 functions :
-     - FRW_read()
-     - FRW_write()
+     - file_read()
+     - file_write()
 
     02/10/2020 > [0.1.0] :
     - Created FRW.c/.h.
@@ -52,7 +52,7 @@
     - Added demonstration program.
 
     BUGS : .
-    NOTES : files_write() doesn't use '\0' as a stop character to allow
+    NOTES : file_write() doesn't use '\0' as a stop character to allow
             users to write all kind of character in file.
             Therefore, binary files can be wrote from text data without
             giving importance to '\0'.
