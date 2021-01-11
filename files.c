@@ -32,7 +32,7 @@
                                  Files by I.A.
 
         Files is just an utility program that allows you to manipulate files
-    more simply than stdio.h does.
+    a little bit more simply than stdio.h does.
 
     You can now read or write into a file in only one line.
 
