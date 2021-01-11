@@ -1,4 +1,5 @@
-This program is a simple utility library that will allow you to manipulate files easier than stdio.h does.
+This program is a simple utility library that will allow you to manipulate file
+a little bit easier than stdio.h does.
 
 A demonstration program is made in prog.c.
 
