@@ -3,7 +3,7 @@ a little bit easier than stdio.h does.
 
 A demonstration program is made in prog.c.
 
-More informations about this library are available in files.h.
+More information about this library are available in files.c.
 
 
 
