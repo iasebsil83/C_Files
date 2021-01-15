@@ -28,7 +28,7 @@
 
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Files [0.1.1] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Files [0.1.2] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                  Files by I.A.
 
         Files is just an utility program that allows you to manipulate files
@@ -50,6 +50,9 @@
     - Fixed writing bug in binary files.
     - Renamed library from "FRW" to "files".
     - Added demonstration program.
+
+    15/01/2021 > [0.1.2] :
+    - Added file_append().
 
     BUGS : .
     NOTES : file_write() doesn't use '\0' as a stop character to allow
@@ -163,6 +166,37 @@ int file_write(char* path, char** data, size_t* length){ // writes into file #pa
 	for(size_t d=0; d < *length; d++){
 		if( fputc( (*data)[d], f) == EOF ){
 			printf("RUNTIME ERROR > files.c : file_write() : Error when writing into file \"%s\".\n", path);
+			return FILES__WRITING_ERROR;
+		}
+	}
+	fclose(f);
+
+	return FILES__SUCCESS;
+}
+
+int file_append(char* path, char** data, size_t* length){ // writes into file #path#
+                                                          // data from #data#
+	//incorrect path                                  // from index 0 to #length#
+	if(path == NULL){                                 // WARNING ! Value inside data will not be free.
+		printf("RUNTIME ERROR > files.c : file_append() : ");
+		printf("Path is NULL.\n");
+		return FILES__PATH_IS_NULL;
+	}
+
+	//incorrect data
+	if(data == NULL || *data == NULL){
+		printf("RUNTIME ERROR > files.c : file_append() : ");
+		printf("Cannot write NULL data.\n");
+		return FILES__DATA_IS_NULL;
+	}
+
+	//openning - creating file
+	FILE* f = fopen(path, "ab");
+
+	//write into file
+	for(size_t d=0; d < *length; d++){
+		if( fputc( (*data)[d], f) == EOF ){
+			printf("RUNTIME ERROR > files.c : file_append() : Error when writing into file \"%s\".\n", path);
 			return FILES__WRITING_ERROR;
 		}
 	}
