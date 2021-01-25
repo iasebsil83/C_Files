@@ -29,7 +29,7 @@
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Prog [V.V.V] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            file.h demonstration program
+                        files.h demonstration program
 
         Blablabla about the subject.
 
