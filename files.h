@@ -58,7 +58,7 @@ int file_write(char* path, char** data, size_t* length); // writes into file #pa
                                                          // data from #data#
                                                          // from index 0 to #length#
                                                          // WARNING ! Value inside data will not be free
-int file_append(char* path, char** data, size_t* length); // same warnings as file_append()
+int file_append(char* path, char** data, size_t* length); // same warnings as file_write()
 
 
 
