@@ -68,7 +68,6 @@
 ******************************************************************************************
 
     LICENCE :
-
     C_Files
     Copyright (C) 2021  Sebastien SILVANO
     This program is free software: you can redistribute it and/or modify
@@ -105,7 +104,7 @@
 
 
 // ---------------- READ / WRITE ----------------
-int file_read(char* path, char** data, size_t* length){ // reads from file #path#
+char file_read(char* path, char** data, size_t* length){ // reads from file #path#
                                                         // output data into #data#
 	//incorrect path                                // and data length into #length#
 	if(path == NULL){                               // WARNING ! Value inside data should not refer to anything.
@@ -145,7 +144,7 @@ int file_read(char* path, char** data, size_t* length){ // reads from file #path
 	return FILES__SUCCESS;
 }
 
-int file_write(char* path, char** data, size_t* length){ // writes into file #path#
+char file_write(char* path, char** data, size_t* length){ // writes into file #path#
                                                          // data from #data#
 	//incorrect path                                 // from index 0 to #length#
 	if(path == NULL){                                // WARNING ! Value inside data will not be free.
@@ -174,7 +173,7 @@ int file_write(char* path, char** data, size_t* length){ // writes into file #pa
 	return FILES__SUCCESS;
 }
 
-int file_append(char* path, char** data, size_t* length){ // writes into file #path#
+char file_append(char* path, char** data, size_t* length){ // writes into file #path#
                                                           // data from #data#
 	//incorrect path                                  // from index 0 to #length#
 	if(path == NULL){                                 // WARNING ! Value inside data will not be free.

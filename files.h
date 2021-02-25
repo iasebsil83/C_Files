@@ -49,16 +49,16 @@
 
 
 // ---------------- READ / WRITE ----------------
-int file_read(char* path, char** data, size_t* length); // reads from file #path#
-                                                        // output data into #data#
-                                                        // and data length into #length#
-                                                        // WARNING ! Value inside data should not refer to anything.
-                                                        //                                      (can refer to NULL)
-int file_write(char* path, char** data, size_t* length); // writes into file #path#
-                                                         // data from #data#
-                                                         // from index 0 to #length#
-                                                         // WARNING ! Value inside data will not be free
-int file_append(char* path, char** data, size_t* length); // same warnings as file_write()
+char file_read(char* path, char** data, size_t* length); // reads from file #path#
+                                                         // output data into #data#
+                                                         // and data length into #length#
+                                                         // WARNING ! Value inside data should not refer to anything.
+                                                         //                                      (can refer to NULL)
+char file_write(char* path, char** data, size_t* length); // writes into file #path#
+                                                          // data from #data#
+                                                          // from index 0 to #length#
+                                                          // WARNING ! Value inside data will not be free
+char file_append(char* path, char** data, size_t* length); // same warnings as file_write()
 
 
 
