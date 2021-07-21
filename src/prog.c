@@ -20,14 +20,6 @@
 
 
 
-
-
-
-
-
-
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Prog [V.V.V] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                         files.h demonstration program
 
@@ -60,14 +52,6 @@
 
 
 
-
-
-
-
-
-
-
-
 // ---------------- EXECUTION ----------------
 
 //main
@@ -77,9 +61,6 @@ int main(){
 	char* data;
 	size_t length;
 	int error;
-
-
-
 
 
 
@@ -97,9 +78,6 @@ int main(){
 		printf("->/\n\n");
 	}
 	free(data);
-
-
-
 
 
 
@@ -121,9 +99,6 @@ int main(){
 
 
 
-
-
-
 	//read from a binary file
 	printf("I.A. > Reading from binary file \"examples/read.bin\"...\n");
 
@@ -140,9 +115,6 @@ int main(){
 
 
 
-
-
-
 	//write into a binary file
 	printf("I.A. > Writing into binary file \"examples/write.bin\"...\n");
 
@@ -153,9 +125,6 @@ int main(){
 	else
 		printf("\nI.A. > Successfully wrote in binary file.\n\n");
 	free(data);
-
-
-
 
 
 

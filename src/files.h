@@ -8,18 +8,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // ---------------- DEFINITIONS ----------------
 
 //error codes
@@ -28,18 +16,6 @@
 #define FILES__NO_FILE_FOUND -3
 #define FILES__WRITING_ERROR -4
 #define FILES__SUCCESS 0
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -59,15 +35,6 @@ char file_write(char* path, char** data, size_t* length); // writes into file #p
                                                           // from index 0 to #length#
                                                           // WARNING ! Value inside data will not be free
 char file_append(char* path, char** data, size_t* length); // same warnings as file_write()
-
-
-
-
-
-
-
-
-
 
 
 
