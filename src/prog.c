@@ -7,7 +7,7 @@
 
 
 //files utility
-#include "files.h"
+#include "../lib/files.h"
 
 
 
@@ -72,10 +72,10 @@ int main(){
 	if(error)
 		printf("I.A. > Error code (%i) has occured.\n\n", error);
 	else{
-		printf("I.A. > Text file content (between \\<-, ->/) :\n\n\\<-");
+		printf("I.A. > Text file content :\n\n\"");
 		for(size_t d=0; d < length; d++)
 			printf("%c", data[d]);
-		printf("->/\n\n");
+		printf("\"\n\n");
 	}
 	free(data);
 

@@ -6,11 +6,11 @@ run: files.o prog.o
 
 
 #example program
-prog.o: src/prog.c src/files.h
+prog.o: src/prog.c lib/files.h
 	gcc -Wall -c src/prog.c -O2
 
 
 
 #files library
-files.o: src/files.c src/files.h
-	gcc -Wall -c src/files.c -O2
+files.o: lib/files.c lib/files.h
+	gcc -Wall -c lib/files.c -O2
