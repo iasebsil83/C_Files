@@ -6,12 +6,9 @@
 
 
 
+
 //files utility
 #include "../lib/files.h"
-
-
-
-
 
 
 
@@ -38,12 +35,8 @@
     BUGS : Active bugs in last version.
     NOTES : Notes.
 
-    Contact     : 
+    Contact     :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-
-
 
 
 

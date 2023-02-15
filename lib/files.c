@@ -6,12 +6,9 @@
 
 
 
+
 //own header
 #include "files.h"
-
-
-
-
 
 
 
@@ -83,16 +80,14 @@
 
 
 
+// ---------------- BASICS ----------------
 
-
-
-
-// ---------------- READ / WRITE ----------------
-char file_read(char* path, char** data, size_t* length){ // reads from file #path#
-                                                        // output data into #data#
-	//incorrect path                                // and data length into #length#
-	if(path == NULL){                               // WARNING ! Value inside data should not refer to anything.
-		printf("RUNTIME ERROR > files.c : file_read() : Path is NULL.\n"); //           (can refer to NULL)
+//read - write - append
+char file_read(char* path, char** data, size_t* length){ // reads from file #path#, output data into #data#, and data length into #length#
+                                                         // WARNING ! Value inside data should not refer to anything (can refer to NULL).
+	//incorrect path
+	if(path == NULL){
+		printf("RUNTIME ERROR > files.c : file_read() : Path is NULL.\n");
 		return FILES__PATH_IS_NULL;
 	}
 
@@ -128,10 +123,10 @@ char file_read(char* path, char** data, size_t* length){ // reads from file #pat
 	return FILES__SUCCESS;
 }
 
-char file_write(char* path, char** data, size_t* length){ // writes into file #path#
-                                                         // data from #data#
-	//incorrect path                                 // from index 0 to #length#
-	if(path == NULL){                                // WARNING ! Value inside data will not be free.
+char file_write(char* path, char** data, size_t* length){ // writes into file #path#, data from #data# from index 0 to #length#
+                                                          // WARNING ! Value inside data will not be free.
+	//incorrect path
+	if(path == NULL){
 		printf("RUNTIME ERROR > files.c : file_write() : Path is NULL.\n");
 		return FILES__PATH_IS_NULL;
 	}
@@ -157,10 +152,10 @@ char file_write(char* path, char** data, size_t* length){ // writes into file #p
 	return FILES__SUCCESS;
 }
 
-char file_append(char* path, char** data, size_t* length){ // writes into file #path#
-                                                          // data from #data#
-	//incorrect path                                  // from index 0 to #length#
-	if(path == NULL){                                 // WARNING ! Value inside data will not be free.
+char file_append(char* path, char** data, size_t* length){ // same warnings as file_write()
+
+	//incorrect path
+	if(path == NULL){
 		printf("RUNTIME ERROR > files.c : file_append() : Path is NULL.\n");
 		return FILES__PATH_IS_NULL;
 	}
