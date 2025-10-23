@@ -4,13 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
-
 //files utility
 #include "../lib/files.h"
-
-
 
 
 
@@ -22,23 +17,8 @@
 
         Blablabla about the subject.
 
-    DD/MM/YYYY > [V.V.V] :
-    - Added something.
-    - Added something else.
-
-    DD/MM/YYYY > [V.V.V] :
-    - Added something that wasn't before.
-    - Fixed a bug.
-    - Added something else.
-    - Added something else again.
-
-    BUGS : Active bugs in last version.
-    NOTES : Notes.
-
-    Contact     :
+    Contact:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
 
 
 
@@ -49,6 +29,7 @@
 
 //main
 int main(){
+
 	//presentation
 	printf("This is a basic example of file reading/writing using \"files.c/.h\".\n\n");
 	char* data;

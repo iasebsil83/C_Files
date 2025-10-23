@@ -1,13 +1,13 @@
 #executable
-run: files.o prog.o
-	gcc -Wall -o run prog.o files.o -O2
+run: files.o main.o
+	gcc -Wall -o run main.o files.o -O2
 	rm -f *.o
 
 
 
 #example program
-prog.o: src/prog.c lib/files.h
-	gcc -Wall -c src/prog.c -O2
+main.o: src/main.c lib/files.h
+	gcc -Wall -c src/main.c -O2
 
 
 
